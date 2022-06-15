@@ -4,6 +4,7 @@ async function getAllApi(){
     let character=[];
      for (let i = 1; i < 6; i++) {
         let pag = (await axios(`https://rickandmortyapi.com/api/character`)).data.results.map(e=>({
+            id:e.id,
             image:e.image,
             name:e.name,
             origin:e.origin.name,
